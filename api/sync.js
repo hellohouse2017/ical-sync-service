@@ -4,9 +4,9 @@ const fs = require('fs');
 const path = require('path');
 const config = require('../config');
 
-// 模擬一個簡單的資料庫 (在 Vercel Serverless 環境中，我們用檔案來儲存狀態)
-const DB_PATH = path.join(process.cwd(), 'availability-db.json');
-
+// 修改 DB_PATH，指向 /tmp 臨時資料夾
+const DB_PATH = path.join('/tmp', 'availability-db.json'); 
+// ... (其他程式碼保持不變)
 // --- 資料庫操作函式 ---
 
 // 讀取/初始化資料庫
