@@ -1,0 +1,14 @@
+{
+  "name": "ical-sync-service",
+  "version": "1.0.0",
+  "description": "Vercel serverless function for iCal synchronization.",
+  "main": "api/sync.js",
+  "scripts": {
+    "start": "node api/sync.js"
+  },
+  "dependencies": {
+    "ical-generator": "^7.1.0",
+    "node-fetch": "^2.7.0",
+    "node-ical": "^6.0.0"
+  }
+}
