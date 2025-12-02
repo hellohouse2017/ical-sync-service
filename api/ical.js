@@ -2,9 +2,10 @@
 const { ICalCalendar } = require('ical-generator');
 const fs = require('fs');
 const path = require('path');
-// 假設資料庫檔案位於根目錄
-const DB_PATH = path.join(process.cwd(), 'availability-db.json');
+// 修改 DB_PATH，指向 /tmp 臨時資料夾
+const DB_PATH = path.join('/tmp', 'availability-db.json'); 
 
+// ... (其他程式碼保持不變)
 // 讀取資料庫
 const readDb = () => {
     try {
