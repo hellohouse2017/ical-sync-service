@@ -1,23 +1,42 @@
-// config.js
-
-// 將您的房源 ID 命名為 'unit1'，如果有多個房源請自行增加 'unit2', 'unit3'
+// config.js (更新範例)
 const config = {
-    // 儲存所有 iCal 匯出連結
     icalUrls: {
-        'unit1': {
-            // 從 Agoda 匯出 (輸入) - 請替換為您的連結
-            agoda: "YOUR_AGODA_EXPORT_ICAL_LINK", 
-            // 從 Airbnb 匯出 (輸入) - 請替換為您的連結
+        // 第一棟民宿：6 房的實體資源
+        'house1': { 
+            // Agoda 衍生房源 1: 四房銷售頁面的 iCal
+            agoda_4room: "https://ycs.agoda.com/en-us/api/ari/icalendar?key=3McT6Ss1RjzR5fkUUOQVIEHw1wX4NSv6", 
+            // Agoda 衍生房源 2: 五房銷售頁面的 iCal
+            agoda_5room: "https://ycs.agoda.com/en-us/api/ari/icalendar?key=hznjnpeIAaCVSkNpzLYm9VeXal%2bEi2WB",
+            // Agoda 衍生房源 3: 六房銷售頁面的 iCal
+            agoda_6room: "https://ycs.agoda.com/en-us/api/ari/icalendar?key=nJDQZCzvNB7jG8ycB1tgRFYT5nskn8kJ",
+            
+            // Airbnb 訂單 (假設 Airbnb 只有一個主要房源連結)
             airbnb: "YOUR_AIRBNB_EXPORT_ICAL_LINK", 
-            // 從 Google 行事曆匯出 (輸入) - 請替換為您的連結
-            google: "YOUR_GOOGLE_CALENDAR_PRIVATE_ICAL_LINK", 
-            // 從 Trip.com 匯出 (輸入) - 請替換為您的連結
+            
+            // Google Calendar (您的自有訂單)
+            google: "https://calendar.google.com/calendar/ical/a77a451f0a645261b0202f6faf810082df31f92d20fe20c19cbb10945d9714f4%40group.calendar.google.com/public/basic.ics", 
+            
+            // Trip.com 訂單
+            tripcom: "YOUR_TRIPCOM_EXPORT_ICAL_LINK" 
+        },
+        // 第二棟民宿 (假設只有一個主要房源連結)
+        'house2': {
+            // Agoda 衍生房源 1: 四房銷售頁面的 iCal
+            agoda_4room: "AGODA_4_ROOM_ICAL_LINK", 
+            // Agoda 衍生房源 2: 五房銷售頁面的 iCal
+            agoda_5room: "AGODA_5_ROOM_ICAL_LINK",
+            // Agoda 衍生房源 3: 六房銷售頁面的 iCal
+            agoda_6room: "AGODA_6_ROOM_ICAL_LINK",
+            
+            // Airbnb 訂單 (假設 Airbnb 只有一個主要房源連結)
+            airbnb: "YOUR_AIRBNB_EXPORT_ICAL_LINK", 
+            
+            // Google Calendar (您的自有訂單)
+            google: "YOUR_GOOGLE_CALENDAR_ICAL_LINK", 
+            
+            // Trip.com 訂單
             tripcom: "YOUR_TRIPCOM_EXPORT_ICAL_LINK" 
         }
     },
-    // Vercel 託管這個 iCal 輸出連結的 URL 基礎路徑
-    // Vercel 部署後，您必須回來將 'YOUR_VERCEL_APP_URL' 替換為實際的網址
-    baseUrl: 'https://YOUR_VERCEL_APP_URL.vercel.app/api/ical'
+    // ...
 };
-
-module.exports = config;
